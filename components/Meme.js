@@ -30,7 +30,7 @@ function, as seen below:
         const randomNumber = Math.floor(Math.random() * allMemes.length)
         const url = allMemes[randomNumber].url
         setMeme(prevMeme => ({
-            ...prevMeme,
+            prevMeme,
             randomImage: url
         }))
         
@@ -39,7 +39,7 @@ function, as seen below:
     function handleChange(event) {
         const {name, value} = event.target
         setMeme(prevMeme => ({
-            ...prevMeme,
+            prevMeme,
             [name]: value
         }))
     }
